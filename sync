@@ -11,9 +11,10 @@ git clone https://github.com/derp-sdm660-common/Local-Manifests.git -b aospa --d
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
 
 
-ls kernel/asus/
+ls kernel/asus/sdm636
 echo "ok!"
 cd /tmp/rom/
 ls vendor/asus
+ls vendor/pa
 ls device/asus/X00TD
 echo "ok!"

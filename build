@@ -1,6 +1,10 @@
 #!/bin/bash
 cd /tmp/rom # Depends on where source got synced
 
+cd device/qcom/common && rm -rf *.patch && curl -LO https://github.com/AOSPA/android_device_qcom_common/commit/e5b908a743aecd300ac1bae2c2294b3da98f7032.patch && patch -p1 < *.patch && cd -
+cd vendor/pa && rm -rf *.patch && curl -LO https://github.com/AOSPA/android_vendor_pa/commit/ec27f18b4a374f7041e1693058e205e0fcfbe734.patch && patch -p1 < *.patch && cd -
+cd vendor/pa && rm -rf *.patch && curl -LO https://github.com/AOSPA/android_vendor_pa/commit/f0bfe716960ee8498d6a9442d734615909163d6b.patch && patch -p1 < *.patch && cd -
+
 # Normal build steps
 #build/envsetup.sh
 #lunch aosp_X00TD-user
